@@ -31,8 +31,8 @@
 <!--		<module>spring-boot-mybatis-mulidatasource</module>-->
 <!--		<module>spring-boot-mybatis-xml</module>-->
 <!--		<module>spring-boot-properties</module>-->
-<!--		<module>spring-boot-rabbitMQ</module>-->
-<!--		<module>spring-boot-rabbitmq2</module>-->
+		<module>spring-boot-rabbitMQ</module>
+		<module>spring-boot-rabbitmq2</module>
 <!--		<module>spring-boot-restful</module>-->
 <!--		<module>spring-boot-scheduled</module>-->
 <!--		<module>spring-boot-session</module>-->
