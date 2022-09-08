@@ -69,6 +69,12 @@
 		<module>sprintboot-mongdb</module>
 		<module>rocketmq-demo</module>
         <module>Netty-Study</module>
+		<module>spring-boot-flowable</module>
+		<module>nacos</module>
+		<module>sharding-jdbc</module>
+		<module>cache-study/springboot-caffeine-cache</module>
+<!--		<module>spring-boot-swagger</module>-->
+		<module>springboot/springboot-web</module>
     </modules>
 
 
