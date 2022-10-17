@@ -3,13 +3,39 @@ package com.example.demo;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.caffeine.CaffeineCacheManager;
+import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 @Configuration
 public class CacheConfig {
+
+    /**
+     * 缓存自定义key生成器
+     * @return
+     */
+    @Bean("myKeyGenerator")
+    public KeyGenerator keyGenerator(){
+        return new KeyGenerator(){
+
+            @Override
+            public Object generate(Object target, Method method, Object... params) {
+                return method.getName()+ Arrays.asList(params).toString();
+            }
+        };
+    }
+
+    /**
+     * 支持 lambda 表达式编写
+     */
+    /*@Bean("myKeyGenerator")
+    public KeyGenerator keyGenerator(){
+        return ( target,  method, params)-> method.getName()+ Arrays.asList(params).toString();
+    }*/
 
     /**
      * 配置缓存管理器
@@ -20,7 +46,7 @@ public class CacheConfig {
         CaffeineCacheManager cacheManager = new CaffeineCacheManager();
         cacheManager.setCaffeine(Caffeine.newBuilder()
                 // 最后一次写入后经过固定时间过期300秒
-                .expireAfterWrite(20, TimeUnit.SECONDS)
+                .expireAfterWrite(100, TimeUnit.SECONDS)
                 // 初始的缓存空间大小
                 .initialCapacity(100)
                 // 缓存的最大条数

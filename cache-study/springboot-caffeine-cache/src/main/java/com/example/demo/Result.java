@@ -1,4 +1,4 @@
-package com.example.demo.test1;
+package com.example.demo;
 
 /**
  * 统一API响应结果封装
@@ -25,6 +25,7 @@ public class Result<T> {
         this.data = data;
         this.success = isSuccess();
     }
+
     public boolean isSuccess() {
         return this.code == 200;
     }

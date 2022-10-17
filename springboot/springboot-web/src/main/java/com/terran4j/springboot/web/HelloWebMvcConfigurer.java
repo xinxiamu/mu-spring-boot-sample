@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 
 @EnableWebMvc
 public class HelloWebMvcConfigurer extends WebMvcConfigurerAdapter {
-	
+
 	private static final Logger log = LoggerFactory.getLogger(HelloWebMvcConfigurer.class);
 
 	public static final ObjectMapper createObjectMapper() {
@@ -39,14 +39,14 @@ public class HelloWebMvcConfigurer extends WebMvcConfigurerAdapter {
 		objectMapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_CONTROL_CHARS, true);
 
 		// json串以良好的格式输出。
-		objectMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+		objectMapper.configure(SerializationFeature.INDENT_OUTPUT, false);
 
 		// 当属性为空或有问题时不参与序列化。
 		objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 
 		// 未知的属性不参与反序列化。
 		objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-		
+
 		if (log.isInfoEnabled()) {
 			log.info("create objectMapper done.");
 		}

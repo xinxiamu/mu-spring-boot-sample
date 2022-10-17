@@ -74,7 +74,7 @@
 		<module>sharding-jdbc</module>
 		<module>cache-study/springboot-caffeine-cache</module>
 <!--		<module>spring-boot-swagger</module>-->
-		<module>springboot/springboot-web</module>
+<!--		<module>springboot/springboot-web</module>-->
     </modules>
 
 
