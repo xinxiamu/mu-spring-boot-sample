@@ -73,6 +73,9 @@
 		<module>nacos</module>
 		<module>sharding-jdbc</module>
 		<module>cache-study/springboot-caffeine-cache</module>
+		<module>cache-study/springboot-redis-cache</module>
+		<module>cache-study/j2cache-ehcache</module>
+		<module>cache-study/j2cache-caffeine</module>
 <!--		<module>spring-boot-swagger</module>-->
 <!--		<module>springboot/springboot-web</module>-->
     </modules>
