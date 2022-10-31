@@ -21,4 +21,16 @@ public class UserController {
         User user = this.userService.get(name);
         return user;
     }
+
+    @GetMapping("/update/{name}")
+    public Boolean update(@PathVariable String name) {
+        this.userService.update(name);
+        return true;
+    }
+
+    @GetMapping("/evict/{name}")
+    public Boolean evict(@PathVariable String name) {
+        this.userService.evict(name);
+        return true;
+    }
 }

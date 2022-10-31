@@ -49,6 +49,15 @@ public class UserService {
 
     //缓存更新
     public void update(String name){
+        User u = userList.stream().filter(user -> user.getName().equals(name)).findFirst().orElse(null);
+        u.setAge(30);
 
+        //更新缓存
+        cacheChannel.set("user", name, u);
+    }
+
+    public void evict(String name){
+        //清除缓存
+        cacheChannel.evict("user", name);
     }
 }
