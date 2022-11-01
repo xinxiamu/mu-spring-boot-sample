@@ -1,0 +1,4 @@
+spring:
+  profiles:
+    # jedis | lettuce
+    active: lettuce

@@ -76,6 +76,8 @@
 		<module>cache-study/springboot-redis-cache</module>
 		<module>cache-study/j2cache-ehcache</module>
 		<module>cache-study/j2cache-caffeine</module>
+		<module>cache-study/j2cache-spring-cache</module>
+		<module>cache-study/j2cache-demo</module>
 <!--		<module>spring-boot-swagger</module>-->
 <!--		<module>springboot/springboot-web</module>-->
     </modules>

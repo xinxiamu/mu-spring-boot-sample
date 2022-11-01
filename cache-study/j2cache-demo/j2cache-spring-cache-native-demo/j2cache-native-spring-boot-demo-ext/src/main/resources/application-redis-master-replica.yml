@@ -1,0 +1,19 @@
+spring:
+  # Spring Data Redis配置
+  redis:
+    client-type: lettuce
+    # 此处仅配置一个Redis节点即可（Master Or Replica均可），Lettuce会根据info replication命令自定发现其他节点
+    host: 192.168.3.101
+    port: 6379
+    password: mypassw123456
+    database: 0
+    # lettuce连接池配置
+    lettuce:
+      pool:
+        enabled: true
+        max-active: 8
+        max-idle: 8
+        min-idle: 5
+        time-between-eviction-runs: 30s
+        max-wait: 5s
+      shutdown-timeout: 100ms
