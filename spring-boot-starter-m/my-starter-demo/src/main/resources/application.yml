@@ -1,0 +1,7 @@
+ljin-person:
+  sex: 男
+  name: zmt
+  age: 18
+  enabled: true
+server:
+  port: 8088
