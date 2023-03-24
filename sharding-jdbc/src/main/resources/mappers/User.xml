@@ -8,7 +8,7 @@
         <result column="password" property="password" jdbcType="VARCHAR" />
     </resultMap>
     
-    <insert id="addUser" parameterType="com.example.shardingjdbc.entity.User">
+    <insert id="addUser" parameterType="com.example.shardingjdbc.entity.User"><![CDATA[
         INSERT INTO user (
           id, username, password
         )
@@ -17,7 +17,7 @@
         #{username,jdbcType=VARCHAR},
         #{password,jdbcType=VARCHAR}
         )
-    </insert>
+    ]]></insert>
    
     <select id="list" resultMap="baseResultMap">
         SELECT u.* FROM user u
